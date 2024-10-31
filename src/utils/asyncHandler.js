@@ -1,6 +1,6 @@
 // We see 2 ways of handling asnyc function: one is by promises and the other is by try and catch
 const asyncHandler = (myFunction) => {
-    (req, res, next) => {
+    return (req, res, next) => {
         Promise.resolve(myFunction(req, res, next)).catch((err) => console.log(err))
     }
 }
